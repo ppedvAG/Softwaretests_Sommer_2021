@@ -71,5 +71,13 @@ namespace Calculator.Tests
             calc.Sum(int.MaxValue, 1);
         }
 
+
+        [TestMethod]
+        public void Calc_GrüßDenInternal()
+        {
+            Calc calc = new Calc();
+
+            calc.IchBinInternal();
+        }
     }
 }
