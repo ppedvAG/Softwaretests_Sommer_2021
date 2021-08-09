@@ -52,11 +52,24 @@ namespace Calculator.Tests
         }
 
         [TestMethod]
+        [TestCategory("ExceptionTest")]
         public void Sum_MAX_and_1_throws_OverflowException()
         {
             Calc calc = new Calc();
 
             Assert.ThrowsException<OverflowException>(() => calc.Sum(int.MaxValue, 1));
         }
+
+
+        [TestMethod]
+        [TestCategory("ExceptionTest")]
+        [ExpectedException(typeof(OverflowException))]
+        public void Sum_MAX_and_1_throws_OverflowException_OLD()
+        {
+            Calc calc = new Calc();
+
+            calc.Sum(int.MaxValue, 1);
+        }
+
     }
 }
