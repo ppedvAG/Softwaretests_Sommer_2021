@@ -1,5 +1,6 @@
 ﻿using ppedv.Blumenklavier.Data.EFCore;
 using ppedv.Blumenklavier.Model;
+using ppedv.Blumenklavier.Model.Contracts;
 using System;
 using System.Linq;
 
@@ -7,21 +8,29 @@ namespace ppedv.Blumenklavier.Logic
 {
     public class Core
     {
+        public IRepository Repository { get; }
+
+        public Core(IRepository repository)
+        {
+            Repository = repository;
+        }
 
         public int GetAllowedPlantCountForAllOfDatabase()
         {
-            using (var con = new EfContext())
-            {
-                return con.Klaviere.ToList().Sum(x => GetAllowedPlantCount(x));
-            }
+            return Repository.GetAll<Klavier>().Sum(x => GetAllowedPlantCount(x));
         }
 
-        public int GetAllowedPlantCount(Klavier klavier)
+        public virtual int GetAllowedPlantCount(Klavier klavier)
         {
             if (klavier == null)
                 throw new ArgumentNullException(nameof(klavier));
 
             return klavier.AnzahlTasten / 3;
+        }
+
+        public virtual int GetMagicNumer()
+        {
+            return 5;
         }
     }
 }
