@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="ppedv.Blumenklavier.UI.WPF.Views.BluemenView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ppedv.Blumenklavier.UI.WPF.Views"
+             xmlns:vm="clr-namespace:ppedv.Blumenklavier.UI.WPF.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.DataContext>
+        <vm:BlumenViewModel/>
+    </UserControl.DataContext>
+    <DockPanel>
+        <WrapPanel DockPanel.Dock="Top">
+            <WrapPanel.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Margin" Value="0,4,4,4"/>
+                    <Setter Property="Padding" Value="12,0"/>
+                </Style>
+            </WrapPanel.Resources>
+            <Button Command="{Binding SaveCommand}">Speichern</Button>
+            <Button>Neu</Button>
+            <Button>Löschen</Button>
+            <Button Command="{Binding SetColorToRedCommand}" AutomationProperties.AutomationId="SetRedButton" >Mach Rot</Button>
+        </WrapPanel>
+        <DataGrid ItemsSource="{Binding BlumenList}"
+                  SelectedItem="{Binding SelectedBlume}"
+                  DockPanel.Dock="Left" Width="300"/>
+
+        <StackPanel Margin="8,0">
+            <Label>Art</Label>
+            <TextBox Text="{Binding SelectedBlume.Art}"/>
+            <Label>Farbe</Label>
+            <TextBox Text="{Binding SelectedBlume.Farbe}" AutomationProperties.AutomationId="ColorTextBox"/>
+            <Label>Welkigkeit</Label>
+            <Slider  Maximum="1000" Value="{Binding SelectedBlume.Welkigkeit}"/>
+            <Label>Klavier</Label>
+            <ComboBox/>
+        </StackPanel>
+    </DockPanel>
+</UserControl>

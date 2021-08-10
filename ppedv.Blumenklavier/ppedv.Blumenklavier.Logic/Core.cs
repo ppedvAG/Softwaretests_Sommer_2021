@@ -1,5 +1,4 @@
-﻿using ppedv.Blumenklavier.Data.EFCore;
-using ppedv.Blumenklavier.Model;
+﻿using ppedv.Blumenklavier.Model;
 using ppedv.Blumenklavier.Model.Contracts;
 using System;
 using System.Linq;
