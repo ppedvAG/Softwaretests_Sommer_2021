@@ -6,6 +6,10 @@
         public string Farbe { get; set; }
         public int Welkigkeit { get; set; }
         public virtual Klavier Klavier { get; set; }
+
+        
     }
+
+    
 
 }
