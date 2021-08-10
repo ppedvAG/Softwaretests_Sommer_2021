@@ -5,9 +5,13 @@ VisualStudioVersion = 17.0.31521.260
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ppedv.Blumenklavier.Model", "ppedv.Blumenklavier.Model\ppedv.Blumenklavier.Model.csproj", "{7CE343FE-4567-402B-80A4-B956202F6872}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.Blumenklavier.Data.EFCore", "ppedv.Blumenklavier.Data.EFCore\ppedv.Blumenklavier.Data.EFCore.csproj", "{7BB257E5-38B9-40BD-8704-4FF4A59FA241}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ppedv.Blumenklavier.Data.EFCore", "ppedv.Blumenklavier.Data.EFCore\ppedv.Blumenklavier.Data.EFCore.csproj", "{7BB257E5-38B9-40BD-8704-4FF4A59FA241}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.Blumenklavier.Data.EFCore.Tests", "ppedv.Blumenklavier.Data.EFCore.Tests\ppedv.Blumenklavier.Data.EFCore.Tests.csproj", "{BCDC8A69-80D4-4117-A58B-2F675EE23925}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ppedv.Blumenklavier.Data.EFCore.Tests", "ppedv.Blumenklavier.Data.EFCore.Tests\ppedv.Blumenklavier.Data.EFCore.Tests.csproj", "{BCDC8A69-80D4-4117-A58B-2F675EE23925}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.Blumenklavier.Logic", "ppedv.Blumenklavier.Logic\ppedv.Blumenklavier.Logic.csproj", "{ACD94009-4004-4846-929D-4007EB9EC009}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.Blumenklavier.Logic.Tests", "ppedv.Blumenklavier.Logic.Tests\ppedv.Blumenklavier.Logic.Tests.csproj", "{78999D2D-1164-417F-8B54-43DE15D48C5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{BCDC8A69-80D4-4117-A58B-2F675EE23925}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCDC8A69-80D4-4117-A58B-2F675EE23925}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCDC8A69-80D4-4117-A58B-2F675EE23925}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACD94009-4004-4846-929D-4007EB9EC009}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACD94009-4004-4846-929D-4007EB9EC009}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACD94009-4004-4846-929D-4007EB9EC009}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACD94009-4004-4846-929D-4007EB9EC009}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78999D2D-1164-417F-8B54-43DE15D48C5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78999D2D-1164-417F-8B54-43DE15D48C5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78999D2D-1164-417F-8B54-43DE15D48C5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78999D2D-1164-417F-8B54-43DE15D48C5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
